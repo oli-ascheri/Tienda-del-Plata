@@ -1,0 +1,10 @@
+.contador {
+    display: flex;
+    justify-content: center;
+    border: 2px;
+    color: rgb(77, 75, 75);
+}
+
+.contador button {
+    margin: 5px;
+}

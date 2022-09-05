@@ -2,7 +2,7 @@ import logo2 from '../../img/tdp-logo.png';
 import CartWidget from '../CartWidget/CartWidget';
 import '../CartWidget/CartWidget.css'
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
         <div className='Nav-bar'>
             <div className='Nav-bar-sup'> 

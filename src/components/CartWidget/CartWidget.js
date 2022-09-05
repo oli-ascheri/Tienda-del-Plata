@@ -1,9 +1,11 @@
 import cart from '../../img/cart-logo.png';
 import './CartWidget.css'
 
-const CartWidget = ({titulo}) => {
+const CartWidget = (props) => {
     return(
-        <img src={cart} className='cart-widget'>{titulo}</img>
+        <div>
+            <img src={cart} className='cart-widget'></img>
+        </div>
     )
 }
 
