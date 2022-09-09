@@ -12,14 +12,16 @@ const ItemCount = () => {
     return (
 
     // Diagrama del contador   
-    <div className='contador'>
-        <div>
+    
+        <div className='contador'>
             <h3>Tengo: {items} articulos.</h3>
             <h3>Stock actual: {stock}</h3>
-            <button onClick={sumar} disabled={items >= stock} >Sumar +</button>
-            <button onClick={restar} disabled={items <= 0}>Restar -</button>
+            <div className='botones'>
+                <button onClick={restar} disabled={items <= 0}><p>RESTAR -</p></button>
+                <button onClick={sumar} disabled={items >= stock}><p>SUMAR +</p></button>
+            </div>
         </div>
-    </div>
+    
   )
 }
 

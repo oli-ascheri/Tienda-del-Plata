@@ -1,10 +1,32 @@
 .contador {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
     border: 2px;
     color: rgb(77, 75, 75);
+    width: 25%;
+    margin: auto;
+    padding: 20px;
+    background-color: #a3a4a4;
+    color: aliceblue;
 }
 
-.contador button {
+.botones {
     margin: 5px;
+}
+
+.botones button {
+        
+        border: none;
+        border-radius: 50%;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 5px;
+}
+.botones p {
+    color: rgb(0, 0, 0);
 }
