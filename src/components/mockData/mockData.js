@@ -14,7 +14,7 @@ const data = [
         name: 'Xiaomi Pocophone',
         price: 529,
         image: XiaomiPocophone,
-        comentary: 'Xiaomi Pocophone Poco X4 Pro 5G Dual SIM 256 GB laser black 8 GB RAM',
+        comentary: 'Xiaomi Pocophone Poco X4 Pro 5G Dual SIM 256 GB laser black 8 GB RAM.',
         category: 'phone',
         discount: 24,
         stock: 8
@@ -24,7 +24,7 @@ const data = [
         name: 'Samsung Galaxy',
         price: 435,
         image: SamsungGalaxy,
-        comentary: 'Samsung Galaxy A52 Dual SIM 128 GB awesome black 6 GB RAM',
+        comentary: 'Samsung Galaxy A52 Dual SIM 128 GB awesome black 6 GB RAM.',
         category: 'phone',
         discount: 8,
         stock: 11
@@ -34,17 +34,17 @@ const data = [
         name: 'Apple iPhone 13',
         price: 2229,
         image: AppleiPhone13,
-        comentary: 'Imagen 3 de 7 de Apple iPhone 11 (64 GB) - Verde',
+        comentary: 'Iphone 13 iOS 15 chip A15 Bionic.',
         category: 'phone',
         discount: 0,
-        stock: 1
+        stock: 5
     },
     {
         id: '4',
         name: 'Notebook Lenovo',
         price: 375,
         image: NotebookLenovo,
-        comentary: 'Notebook Lenovo V15-IGL iron gray 15.6", Intel Celeron N4020 8GB de RAM 256GB SSD',
+        comentary: 'Notebook Lenovo V15-IGL iron gray 15.6", Intel Celeron N4020 8GB de RAM 256GB SSD.',
         category: 'pc',
         discount: 0,
         stock: 3
@@ -54,7 +54,7 @@ const data = [
         name: 'Notebook Asus ZenBook',
         price: 1258,
         image: NotebookAsusZenBook,
-        comentary: 'Notebook Asus ZenBook UX425EA gris 14", Intel Core i5 1135G7 8GB de RAM 512GB SSD',
+        comentary: 'Notebook Asus ZenBook UX425EA gris 14", Intel Core i5 1135G7 8GB de RAM 512GB SSD.',
         category: 'pc',
         discount: 13,
         stock: 2
@@ -64,7 +64,7 @@ const data = [
         name: 'Notebook Huawei',
         price: 989,
         image: NotebookHuawei,
-        comentary: 'Notebook Huawei D14 Core I3 14 8gb 256gb Ssd W10',
+        comentary: 'Notebook Huawei D14 Core I3 14 8gb 256gb Ssd W10.',
         category: 'pc',
         discount: 26,
         stock: 7
@@ -75,7 +75,7 @@ const data = [
         name: 'Auriculares gamer Onikuma',
         price: 30,
         image: AuricularesgamerOnikuma,
-        comentary: 'Auriculares gamer Onikuma K5 black y grey con luz LED',
+        comentary: 'Auriculares gamer Onikuma K5 black y grey con luz LED.',
         category: 'accessory',
         discount: 0,
         stock: 12
@@ -85,7 +85,7 @@ const data = [
         name: 'Mouse Logitech',
         price: 45,
         image: MouseLogitech,
-        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black',
+        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
         category: 'accessory',
         discount: 7,
         stock: 20
