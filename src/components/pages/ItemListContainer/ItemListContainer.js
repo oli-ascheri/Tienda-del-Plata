@@ -1,10 +1,13 @@
-import data from "../mockData/mockData"
+import data from "../../mockData/mockData"
 import { useEffect, useState } from "react"
-import ItemList from "../ItemList/ItemList"
+import { useParams } from "react-router-dom"
+import ItemList from "../../ItemList/ItemList"
+
 
 const ItemListContainer = ({greeting}) => {
 
     const [productList, setProductList] = useState([])
+    const { Id } = useParams()
 
     useEffect(() => {
         getProducts.then((response) => {
@@ -18,7 +21,7 @@ const ItemListContainer = ({greeting}) => {
             }, 2000)
         })
     
-
+    
     return (
         <>
             <ItemList lista={productList} />

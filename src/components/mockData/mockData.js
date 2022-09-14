@@ -15,7 +15,7 @@ const data = [
         price: 529,
         image: XiaomiPocophone,
         comentary: 'Xiaomi Pocophone Poco X4 Pro 5G Dual SIM 256 GB laser black 8 GB RAM.',
-        category: 'phone',
+        category: 'celulares',
         discount: 24,
         stock: 8
     },
@@ -25,7 +25,7 @@ const data = [
         price: 435,
         image: SamsungGalaxy,
         comentary: 'Samsung Galaxy A52 Dual SIM 128 GB awesome black 6 GB RAM.',
-        category: 'phone',
+        category: 'celulares',
         discount: 8,
         stock: 11
     },
@@ -35,7 +35,7 @@ const data = [
         price: 2229,
         image: AppleiPhone13,
         comentary: 'Iphone 13 iOS 15 chip A15 Bionic.',
-        category: 'phone',
+        category: 'celulares',
         discount: 0,
         stock: 5
     },
@@ -45,7 +45,7 @@ const data = [
         price: 375,
         image: NotebookLenovo,
         comentary: 'Notebook Lenovo V15-IGL iron gray 15.6", Intel Celeron N4020 8GB de RAM 256GB SSD.',
-        category: 'pc',
+        category: 'computacion',
         discount: 0,
         stock: 3
     },
@@ -55,7 +55,7 @@ const data = [
         price: 1258,
         image: NotebookAsusZenBook,
         comentary: 'Notebook Asus ZenBook UX425EA gris 14", Intel Core i5 1135G7 8GB de RAM 512GB SSD.',
-        category: 'pc',
+        category: 'computacion',
         discount: 13,
         stock: 2
     },
@@ -65,7 +65,7 @@ const data = [
         price: 989,
         image: NotebookHuawei,
         comentary: 'Notebook Huawei D14 Core I3 14 8gb 256gb Ssd W10.',
-        category: 'pc',
+        category: 'computacion',
         discount: 26,
         stock: 7
     },
@@ -76,7 +76,7 @@ const data = [
         price: 30,
         image: AuricularesgamerOnikuma,
         comentary: 'Auriculares gamer Onikuma K5 black y grey con luz LED.',
-        category: 'accessory',
+        category: 'computacion',
         discount: 0,
         stock: 12
     },
@@ -86,7 +86,87 @@ const data = [
         price: 45,
         image: MouseLogitech,
         comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
-        category: 'accessory',
+        category: 'computacion',
+        discount: 7,
+        stock: 20
+    },
+    { 
+        id: '9',
+        name: 'Mouse Logitech',
+        price: 45,
+        image: MouseLogitech,
+        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        category: 'camaras',
+        discount: 7,
+        stock: 20
+    },
+    { 
+        id: '10',
+        name: 'Mouse Logitech',
+        price: 45,
+        image: MouseLogitech,
+        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        category: 'camaras',
+        discount: 7,
+        stock: 20
+    },
+    { 
+        id: '11',
+        name: 'Mouse Logitech',
+        price: 45,
+        image: MouseLogitech,
+        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        category: 'camaras',
+        discount: 7,
+        stock: 20
+    },
+    { 
+        id: '12',
+        name: 'Mouse Logitech',
+        price: 45,
+        image: MouseLogitech,
+        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        category: 'camaras',
+        discount: 7,
+        stock: 20
+    },
+    { 
+        id: '13',
+        name: 'Mouse Logitech',
+        price: 45,
+        image: MouseLogitech,
+        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        category: 'videojuegos',
+        discount: 7,
+        stock: 20
+    },
+    { 
+        id: '14',
+        name: 'Mouse Logitech',
+        price: 45,
+        image: MouseLogitech,
+        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        category: 'videojuegos',
+        discount: 7,
+        stock: 20
+    },
+    { 
+        id: '15',
+        name: 'Mouse Logitech',
+        price: 45,
+        image: MouseLogitech,
+        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        category: 'videojuegos',
+        discount: 7,
+        stock: 20
+    },
+    { 
+        id: '16',
+        name: 'Mouse Logitech',
+        price: 45,
+        image: MouseLogitech,
+        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        category: 'videojuegos',
         discount: 7,
         stock: 20
     }
