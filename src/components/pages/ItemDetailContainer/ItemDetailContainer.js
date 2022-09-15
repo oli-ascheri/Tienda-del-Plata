@@ -3,6 +3,7 @@ import ItemDetail from "../../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react"
 
+
 const ItemDetailContainer = () => {
 
     const {id} = useParams();
@@ -14,8 +15,6 @@ const ItemDetailContainer = () => {
         });
     }, [])
     
-  
-
     const getProducts = new Promise ((resolve, reject) => {
             setTimeout(() => {
             resolve(data[id-1])

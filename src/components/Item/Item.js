@@ -3,15 +3,13 @@ import './Item.css'
 
 
 const Item = ({name, price, image, comentary, discount}) => {
-  // stock
-
+ 
   const totaldiscount = (price, discount) => {
     let regladetres = discount * price
     let descuento = regladetres / 100
     let result = price - descuento
     return(Math.round(result))}
     
-
   return (<div className="product-container">
             <div className="product-card">
               <div className="product-image">

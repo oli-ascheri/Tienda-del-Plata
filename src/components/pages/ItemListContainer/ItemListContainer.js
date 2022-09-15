@@ -7,20 +7,25 @@ import ItemList from "../../ItemList/ItemList"
 const ItemListContainer = ({greeting}) => {
 
     const [productList, setProductList] = useState([])
-    const { Id } = useParams()
+    const { category } = useParams()
 
     useEffect(() => {
-        getProducts.then((response) => {
-        setProductList(response);
-        });
-    }, [])
+        
+        if(category){
+            const prodfilter = data.filter(p => p.category === category)
+            setProductList(prodfilter)
+        } else {
+            getProducts.then((response) => {
+                setProductList(response);
+                }); 
+        }
+    }, [category])
 
     const getProducts = new Promise ((resolve, reject) => {
             setTimeout(() => {
             resolve(data)
             }, 2000)
         })
-    
     
     return (
         <>

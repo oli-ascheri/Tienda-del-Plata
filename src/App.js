@@ -15,10 +15,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='compra/:id' element={<ItemDetailContainer />} />
-        <Route path="category/:category" element={<ItemListContainer />} />
-        <Route path="/computacion" element={<ItemListContainer  />} />
-        <Route path="/camaras" element={<ItemListContainer />} />
-        <Route path="/videojuegos" element={<ItemListContainer />} />
+        <Route path='category/:category' element={<ItemListContainer/>} />
         <Route path='/' element={<ItemListContainer greeting={'Hola!'}/>} />
       </Routes>
     </BrowserRouter>

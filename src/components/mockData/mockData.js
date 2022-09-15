@@ -1,14 +1,31 @@
+// Celulares
 import XiaomiPocophone from '../../img/xiaomi-pocophone.jpg'
 import SamsungGalaxy from '../../img/samsung-galaxy.jpg'
 import AppleiPhone13 from '../../img/apple-iphone-13.jpg'
+import HuaweiNova from '../../img/huawei-nova.jpg'
+
+// Computacion
 import NotebookLenovo from '../../img/notebook-lenovo.jpg'
 import NotebookAsusZenBook from '../../img/notebook-asus-zenbook.jpg'
 import NotebookHuawei from '../../img/notebook-huawei.jpg'
-import AuricularesgamerOnikuma from '../../img/auriculares-gamer-onikuma.jpg'
 import MouseLogitech from '../../img/mouse-logitech.jpg'
+
+// Camaras 
+import NikonCoolpix from '../../img/nikon-coolpix.jpg'
+import SonyKit from '../../img/sony-kit.jpg'
+import GoProHero9 from '../../img/gopro-hero9.jpg'
+import KitFiltro from '../../img/kit-lente.jpg'
+
+// VideoJuegos
+import PlayStation from '../../img/playstation.jpg'
+import NintendoSwitch from '../../img/nintendo-switch.jpg'
+import XboxOne from '../../img/xbox-one.jpg'
+import AuricularesgamerOnikuma from '../../img/auriculares-gamer-onikuma.jpg'
 
 // Articulos y stock
 const data = [
+
+    // Celulares
     {
         id: '1',
         name: 'Xiaomi Pocophone',
@@ -39,8 +56,20 @@ const data = [
         discount: 0,
         stock: 5
     },
-    {
+    { 
         id: '4',
+        name: 'Huawei Nova 9',
+        price: 799,
+        image: HuaweiNova,
+        comentary: 'Huawei Nova 9 (Global) Dual SIM 128 GB black 8 GB RAM.',
+        category: 'celulares',
+        discount: 13,
+        stock: 36
+    },
+    
+    // Computacion
+    {
+        id: '5',
         name: 'Notebook Lenovo',
         price: 375,
         image: NotebookLenovo,
@@ -50,7 +79,7 @@ const data = [
         stock: 3
     },
     { 
-        id: '5',
+        id: '6',
         name: 'Notebook Asus ZenBook',
         price: 1258,
         image: NotebookAsusZenBook,
@@ -60,7 +89,7 @@ const data = [
         stock: 2
     },
     { 
-        id: '6',
+        id: '7',
         name: 'Notebook Huawei',
         price: 989,
         image: NotebookHuawei,
@@ -68,17 +97,6 @@ const data = [
         category: 'computacion',
         discount: 26,
         stock: 7
-    },
-  
-    { 
-        id: '7',
-        name: 'Auriculares gamer Onikuma',
-        price: 30,
-        image: AuricularesgamerOnikuma,
-        comentary: 'Auriculares gamer Onikuma K5 black y grey con luz LED.',
-        category: 'computacion',
-        discount: 0,
-        stock: 12
     },
     { 
         id: '8',
@@ -90,85 +108,89 @@ const data = [
         discount: 7,
         stock: 20
     },
+    
+    // Camaras
     { 
         id: '9',
-        name: 'Mouse Logitech',
-        price: 45,
-        image: MouseLogitech,
-        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        name: 'Nikon Coolpix B B500',
+        price: 490,
+        image: NikonCoolpix,
+        comentary: 'Nikon Coolpix B B500 compacta avanzada color negro.',
         category: 'camaras',
-        discount: 7,
-        stock: 20
+        discount: 0,
+        stock: 9
     },
     { 
         id: '10',
-        name: 'Mouse Logitech',
-        price: 45,
-        image: MouseLogitech,
-        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        name: 'Sony Kit Alpha 6400',
+        price: 1499,
+        image: SonyKit,
+        comentary: 'Sony Kit Alpha 6400 + lente SELP1650 ILCE-6400L sin espejo color negro.',
         category: 'camaras',
-        discount: 7,
-        stock: 20
+        discount: 8,
+        stock: 2
     },
     { 
         id: '11',
-        name: 'Mouse Logitech',
-        price: 45,
-        image: MouseLogitech,
-        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        name: 'GoPro Hero9',
+        price: 642,
+        image: GoProHero9,
+        comentary: 'Cámara GoPro Hero9 5K CHDHX-901 NTSC/PAL negra.',
         category: 'camaras',
-        discount: 7,
-        stock: 20
+        discount: 14,
+        stock: 11
     },
     { 
         id: '12',
-        name: 'Mouse Logitech',
-        price: 45,
-        image: MouseLogitech,
-        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        name: 'Kit Filtro De Lente 52mm',
+        price: 12,
+        image: KitFiltro,
+        comentary: 'Kit De Filtro De Lente 52mm Uv Cpl Fld Cámara Reflex.',
         category: 'camaras',
-        discount: 7,
-        stock: 20
+        discount: 0,
+        stock: 56
     },
+
+    // Videojuegos
     { 
         id: '13',
-        name: 'Mouse Logitech',
-        price: 45,
-        image: MouseLogitech,
-        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        name: 'PlayStation 5',
+        price: 1149,
+        image: PlayStation,
+        comentary: 'Sony PlayStation 5 825GB Digital Edition.',
         category: 'videojuegos',
-        discount: 7,
-        stock: 20
+        discount: 0,
+        stock: 5
     },
     { 
         id: '14',
-        name: 'Mouse Logitech',
-        price: 45,
-        image: MouseLogitech,
-        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        name: 'Xbox One S',
+        price: 700,
+        image: XboxOne,
+        comentary: 'Xbox One S 4k 1tb.',
         category: 'videojuegos',
         discount: 7,
-        stock: 20
+        stock: 9
     },
     { 
         id: '15',
-        name: 'Mouse Logitech',
-        price: 45,
-        image: MouseLogitech,
-        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        name: 'Nintendo Switch',
+        price: 689,
+        image: NintendoSwitch,
+        comentary: 'Nintendo Switch OLED 64GB Standard.',
         category: 'videojuegos',
-        discount: 7,
-        stock: 20
+        discount: 20,
+        stock: 25
     },
     { 
         id: '16',
-        name: 'Mouse Logitech',
-        price: 45,
-        image: MouseLogitech,
-        comentary: 'Mouse de juego inalámbrico Logitech G Series Lightspeed G305 black.',
+        name: 'Auriculares gamer Onikuma',
+        price: 30,
+        image: AuricularesgamerOnikuma,
+        comentary: 'Auriculares gamer Onikuma K5 black y grey con luz LED.',
         category: 'videojuegos',
-        discount: 7,
-        stock: 20
+        discount: 5,
+        stock: 54
     }
 ]
 
