@@ -1,11 +1,8 @@
 import './ItemCount.css'
-import { useState } from 'react'
 
-const ItemCount = () => {
+const ItemCount = ({setItems, items, stock}) => {
 
-    // Logica del contador
-    let stock = 10
-    const[items, setItems] = useState(0)
+    
     const sumar = () => setItems(items + 1) 
     const restar = () => setItems(items - 1)
 
@@ -13,14 +10,16 @@ const ItemCount = () => {
 
     // Diagrama del contador   
     
-        <div className='contador'>
-            <h3>Tengo: {items} articulos.</h3>
-            <h3>Stock actual: {stock}</h3>
-            <div className='botones'>
-                <button onClick={restar} disabled={items <= 0}><p>RESTAR -</p></button>
-                <button onClick={sumar} disabled={items >= stock}><p>SUMAR +</p></button>
+    <div className='contador'>
+            <div className='details'>
+                <p>Cantidad: {items} </p>
+                <p className='stock'>({stock} disponibles)</p>
             </div>
-        </div>
+            <div className='botones'>
+                <button onClick={restar} disabled={items <= 0}><p>-</p></button>
+                <button onClick={sumar} disabled={items >= stock}><p>+</p></button>
+            </div>
+    </div>
     
   )
 }

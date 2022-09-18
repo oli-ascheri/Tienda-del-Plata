@@ -10,20 +10,25 @@ const Item = ({name, price, image, comentary, discount}) => {
     let result = price - descuento
     return(Math.round(result))}
     
-  return (<div className="product-container">
-            <div className="product-card">
-              <div className="product-image">
-                <span className="discount-tag">{discount} % off</span>
-                <img src={image} className="product-thumb" alt= {name} />
-                <button className="card-btn">Ver detalles aqui</button>
-              </div>
-              <div className="product-info">
-                <h2 className="product-brand">{name} </h2>
-                <p className="product-short-des">{comentary}</p>
-                <span className="price">USD {totaldiscount (price, discount)} </span><span className="actual-price">USD {price} </span>
-              </div>
-            </div>
+ return (
+ <div className="product-container">
+ <div className="product-card">
+     <div className="product-image">
+         <span className="discount-tag">{discount} % off</span>
+         <img src={image} className="product-thumb" alt= {name} />
+         <button className="card-btn">Comprar este articulo</button>
+     </div>
+     <div className="product-info">
+     <h2 className="product-brand">{name} </h2>
+     <p className="product-short-des">{comentary}</p>
+         <div>
+          <span className="price">USD {totaldiscount (price, discount)} </span>
+          <span className="actual-price">USD {price}</span>
           </div>
-)
+     </div>
+ </div>
+
+</div>)
+
 }
 export default Item
