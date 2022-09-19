@@ -1,3 +1,10 @@
+Pagina de Ecomerce creada por Olimar Ascheri utilizando React JS. 
+
+La idea principal del sitio web es interpretar el funcionamiento de un Ecomerce actual usando como ejemplo el sitio MercadoLibre.com.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
