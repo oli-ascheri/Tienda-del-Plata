@@ -1,12 +1,22 @@
 import React from 'react'
 import ItemCount from './../ItemCount/ItemCount'
-import { useState } from 'react'
+import { useState, useContext} from 'react'
 import './ItemDetail.css'
 import { NavLink } from 'react-router-dom'
+import { CartContext } from '../../context/cartContext'
 
-function ItemDetail ({name, price, image, comentary, discount, stock}) {
 
-    const[items, setItems] = useState(0)
+function ItemDetail ({name, price, image, comentary, discount, stock, productItem}) {
+
+    const { addToCart } = useContext(CartContext)
+
+    function onAdd(productItem, cantidad) {
+            addToCart(productItem, cantidad)
+            console.log(productItem);
+            console.log(cantidad)
+    }
+
+    const[count, setCount] = useState(1)
 
     const totaldiscount = (price, discount) => {
         let regladetres = discount * price
@@ -14,9 +24,6 @@ function ItemDetail ({name, price, image, comentary, discount, stock}) {
         let result = price - descuento
         return(Math.round(result))}
 
-    const handleClick = () => {
-        console.log(items);
-    }
 
     return (
     <div className='article-individual'>
@@ -29,8 +36,8 @@ function ItemDetail ({name, price, image, comentary, discount, stock}) {
             <p>Costo actual: USD {price}</p>
             <p>Descuento actual: {discount}% </p>
             <h2>USD {totaldiscount (price, discount)}</h2>
-            <ItemCount setItems={setItems} items={items} stock={stock} />
-            <NavLink to={'/cart'} onClick={handleClick}> 
+            <ItemCount setCount={setCount} count={count} stock={stock} precio={price} />
+            <NavLink to={'/cart'} onClick={() => onAdd(productItem, count)}> 
                 <button class="button2"> Comprar </button>
             </NavLink>
         </div>

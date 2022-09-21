@@ -34,7 +34,8 @@ const ItemDetailContainer = () => {
                  comentary={productItem.comentary}
                  category={productItem.category}
                  discount={productItem.discount}
-                 stock={productItem.stock} />
+                 stock={productItem.stock}
+                 productItem={productItem} />
              </>
              : <p className="loading">Cargando articulo... Por favor, espere.</p> // Si no encuentro el producto, muestro otra cosa. Por ejemplo un mensajito de "loading", podes poner una foto, un gif,  podes poner null y que no haga nada o lo que quieras 
          

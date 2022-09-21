@@ -1,10 +1,21 @@
 import './ItemCount.css'
 
-const ItemCount = ({setItems, items, stock}) => {
+const ItemCount = ({setCount, count, stock }) => {
 
     
-    const sumar = () => setItems(items + 1) 
-    const restar = () => setItems(items - 1)
+const incrementar = () => {
+    if (count < stock) {
+        setCount(count + 1)
+    }
+}
+const decrementar = () => {
+    if (count > 0) {
+        setCount(count - 1)
+    }
+}
+
+    // const sumar = () => setItems(items + 1) 
+    // const restar = () => setItems(items - 1)
 
     return (
 
@@ -12,12 +23,12 @@ const ItemCount = ({setItems, items, stock}) => {
     
     <div className='contador'>
             <div className='details'>
-                <p>Cantidad: {items} </p>
+                <p>Cantidad: {count} </p>
                 <p className='stock'>({stock} disponibles)</p>
             </div>
             <div className='botones'>
-                <button onClick={restar} disabled={items <= 0}><p>-</p></button>
-                <button onClick={sumar} disabled={items >= stock}><p>+</p></button>
+                <button onClick={decrementar} disabled={count <= 1}><p>-</p></button>
+                <button onClick={incrementar} disabled={count >= stock}><p>+</p></button>
             </div>
     </div>
     
