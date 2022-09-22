@@ -7,19 +7,22 @@ export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
 
     const addToCart = (item, quantity) => {
-      setCart ([...cart, { ...item, quantity }])
-      console.log('cart', [...cart, { ...item, quantity }]);
+        if (isInCart(item.id)) {
+            alert("ya esta en el carrito")
+        } else {
+            setCart ([...cart, { ...item, quantity }])
+        }
+        console.log('cart', [...cart, { ...item, quantity}])
+    }
 
-    // const addToCart = (item, cantidad) => {
-    //     if (isInCart(item.id)) {
-    //         alert("ya esta en el carrito")
-    //     } else {
-    //         setCart ([...cart, { ...item, cantidad }])
-    //     }
-    // }
-    // const isInCart = (id) => {
-    //     return cart.some((item) => item.id === id)
+    const isInCart = (id) => {
+        return cart.some((item) => item.id === id)
      }
+
+    const clear = () => {
+        setCart([])
+    }
+    
     return (
         <CartContext.Provider value={{ cart, addToCart }}>
             {children}

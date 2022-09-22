@@ -18,8 +18,6 @@ const decrementar = () => {
     // const restar = () => setItems(items - 1)
 
     return (
-
-    // Diagrama del contador   
     
     <div className='contador'>
             <div className='details'>

@@ -12,8 +12,6 @@ function ItemDetail ({name, price, image, comentary, discount, stock, productIte
 
     function onAdd(productItem, cantidad) {
             addToCart(productItem, cantidad)
-            console.log(productItem);
-            console.log(cantidad)
     }
 
     const[count, setCount] = useState(1)
@@ -36,10 +34,19 @@ function ItemDetail ({name, price, image, comentary, discount, stock, productIte
             <p>Costo actual: USD {price}</p>
             <p>Descuento actual: {discount}% </p>
             <h2>USD {totaldiscount (price, discount)}</h2>
-            <ItemCount setCount={setCount} count={count} stock={stock} precio={price} />
-            <NavLink to={'/cart'} onClick={() => onAdd(productItem, count)}> 
-                <button class="button2"> Comprar </button>
-            </NavLink>
+
+            <ItemCount 
+                setCount={setCount} 
+                count={count} 
+                stock={stock} 
+                precio={price} 
+            />
+
+           
+                    <button class="button2" onClick = {() => onAdd(productItem, count)}> 
+                    Agregar al carrito 
+                    </button>
+   
         </div>
     </div>) 
 }
