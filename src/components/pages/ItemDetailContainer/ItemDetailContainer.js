@@ -1,14 +1,27 @@
-import data from "../../mockData/mockData";
-import "./ItemDetailContainer.css"
-import ItemDetail from "../../ItemDetail/ItemDetail";
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react"
+import data from '../../mockData/mockData';
+import './ItemDetailContainer.css'
+import ItemDetail from '../../ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+// import { getFirestore, doc, getDoc } from 'firebase/firestore'
 
 
 const ItemDetailContainer = () => {
 
     const {id} = useParams();
     const [productItem, setProductItem] = useState([])
+    // const db = getFirestore()
+    // const queryDoc = doc(db, 'items', 'GYrip51y4MGOVGqO28Rf')
+    // getDoc(queryDoc)
+    // .then((res) => {
+    //     console.log(res.id)
+    //     console.log(res.data())
+    // })
+    // .catch(err => console.log(err))
+
+    // const itemsCollections = db.collection('items')
+    // const item = itemsCollections.doc('GYrip51y4MGOVGqO28Rf') 
+    // console.log(item);
 
     useEffect(() => {
         getProducts.then((response) => {

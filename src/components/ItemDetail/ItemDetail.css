@@ -1,10 +1,29 @@
+@keyframes aparecer {
+    0% {
+        opacity: 0; }
+    100% {
+        opacity: 1; } }
+
+@keyframes fade-right {
+    0% {
+        transform: translateX(50px);
+        opacity: 0; }
+    100% {
+        transform: translateX(0px);
+        opacity: 1; } }
+
 .article-individual{
     display: flex;
     align-items: center;
     margin: 60px auto ;
     width: 80%;
     height: 90%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    animation-name: aparecer;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-duration: 1.6s; 
 }
 
 .info-container p {
@@ -14,6 +33,11 @@
 .img-container{
     display: flex;
     justify-content: center;
+
+    animation-name: aparecer;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-duration: 1.2s; 
 }
 
 .individual-img {
@@ -22,6 +46,11 @@
 
 .info-container{
     width: 30%;
+
+    animation-name: fade-right;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-duration: 1.2s; 
 }
 
 .description {
@@ -36,16 +65,65 @@
     background-color: rgb(223, 194, 47); 
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
-    margin: 4px 2px;
+    margin: 4px 4px;
     cursor: pointer;
     transition-duration: 0.4s;
+    height: 50px;
+    width: 250px;
 }
 
-.button2:hover {
+.button3 {
+    background-color: rgb(223, 194, 47); 
+    border: none;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 4px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    height: 50px;
+    width: 250px;
+}
+
+.button2:hover, .button3:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.option-buttons {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.option-buttons a {
+    width: 130px;
+}
+.cart-widget {
+    height: 20px;
+    width: 20px;
+    margin-left: 4px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
+
+.back-button {
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+    font-size: larger;
+    color: gray;
 }

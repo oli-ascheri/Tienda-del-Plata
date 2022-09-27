@@ -1,9 +1,35 @@
+@keyframes fade-right {
+    0% {
+      transform: translateX(50px);
+      opacity: 0; }
+    100% {
+      transform: translateX(0px);
+      opacity: 1; } }
+      
+@keyframes fade-left {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0; }
+    100% {
+        transform: translateX(0px);
+        opacity: 1; } }      
+     
+@keyframes aparecer {
+    0% {
+        opacity: 0; }
+    100% {
+        opacity: 1; } }
+
 .product-container{
     padding: 20px 10vw;
     display: flex;
     scroll-behavior: smooth;
     margin: 5px;
-    
+
+    animation-name: fade-left;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-duration: .5s; 
 }
 
 .product-container::-webkit-scrollbar{

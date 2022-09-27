@@ -1,0 +1,30 @@
+@keyframes fade-down {
+    0% {
+        transform: translateY(100px);
+        opacity: 0; }
+    100% {
+        transform: translateY(0px);
+        opacity: 1; } }
+
+.buy-cart {
+    margin: 60px auto ;
+    width: 80%;
+    height: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    animation-name: fade-down;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 1.6s; 
+}
+
+.cart-article {
+    display: flex;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-article {
+    width: 100px;
+;
+}
