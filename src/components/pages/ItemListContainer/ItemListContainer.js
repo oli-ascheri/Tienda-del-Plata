@@ -2,7 +2,7 @@ import data from "../../mockData/mockData"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemList from "../../ItemList/ItemList"
-// import { getFirestore, getDocs, collection } from 'firebase/firestore'
+ import { getFirestore, getDocs, collection } from 'firebase/firestore'
  
 
 const ItemListContainer = () => {
@@ -22,11 +22,11 @@ const ItemListContainer = () => {
         }
     }, [category])
 
-    const getProducts = new Promise ((resolve, reject) => {
-            setTimeout(() => {
-            resolve(data)
-            }, 2000)
-        })
+    // const getProducts = new Promise ((resolve, reject) => {
+    //         setTimeout(() => {
+    //         resolve(data)
+    //         }, 2000)
+    //     })
 
     // const getProducts = () => {
     //     const db = getFirestore()
@@ -39,6 +39,25 @@ const ItemListContainer = () => {
     //     })
     //     .catch((err) => console.log(err))
     // }
+
+    useEffect(() => {
+        getProducts()
+      }, [category])
+
+    const getProducts = () => {
+        const db = getFirestore()
+        const querySnapShot = collection(db, 'items')
+
+        getDocs(querySnapShot).then((response) => {
+            const data = response.docs.map((doc) => {
+                return { id: doc.id, ...doc.data()}
+            })
+            setProductList(data);
+        })
+
+        .catch((err) => console.log(err))
+
+    }
     
     return (
         <>
