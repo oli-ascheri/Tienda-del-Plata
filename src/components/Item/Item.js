@@ -1,7 +1,8 @@
 import React from 'react'
 import './Item.css'
 
-
+const rutaInicial = '../img/'
+ 
 const Item = ({name, price, image, comentary, discount}) => {
  
   const totaldiscount = (price, discount) => {
@@ -15,7 +16,7 @@ const Item = ({name, price, image, comentary, discount}) => {
  <div className="product-card">
      <div className="product-image">
          <span className="discount-tag">{discount} % off</span>
-         <img src={image} className="product-thumb" alt= {name} />
+         <img src={rutaInicial + image} className="product-thumb" alt= {name} />
          <button className="card-btn">Comprar este articulo</button>
      </div>
      <div className="product-info">

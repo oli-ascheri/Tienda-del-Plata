@@ -14,6 +14,7 @@ function ItemDetail ({name, price, image, comentary, discount, stock, productIte
     const { addToCart } = useContext(CartContext)
     const[count, setCount] = useState(1)
 
+    const rutaInicial = '../img/'
 
     function onAdd(productItem, cantidad) {
             addToCart(productItem, cantidad)
@@ -30,7 +31,7 @@ function ItemDetail ({name, price, image, comentary, discount, stock, productIte
     return (
     <div className='article-individual'>
         <div className='img-container'>
-            <img className='individual-img' src={image} alt={name} />
+            <img className='individual-img' src={rutaInicial + image} alt={name} />
         </div>
         <div className='info-container'>
             <Link to={'/'} className='back-button' >Volver</Link>
