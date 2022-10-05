@@ -4,7 +4,7 @@ import { useState, useContext} from 'react'
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/cartContext'
-import cart from '../../img/cart-logo.png';
+import cart from './../CartWidget/cart-logo.png';
 
 
 
@@ -14,7 +14,7 @@ function ItemDetail ({name, price, image, comentary, discount, stock, productIte
     const { addToCart } = useContext(CartContext)
     const[count, setCount] = useState(1)
 
-    const rutaInicial = '../img/'
+    const rutaInicial = '/img/'
 
     function onAdd(productItem, cantidad) {
             addToCart(productItem, cantidad)

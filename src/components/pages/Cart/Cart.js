@@ -2,11 +2,37 @@ import { useContext } from "react"
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../context/cartContext"
 import '../Cart/Cart.css'
+import { collection, addDoc, getFirestore } from "firebase/firestore";
+import { moment } from "moment/moment";
 
 const Cart = () => {
 
   const { cart, removeItem, clear } = useContext(CartContext)
+  const rutaInicial = '/img/'
   console.log('cart', cart);
+  
+  const createOrder = () => {
+    const db = getFirestore();
+    const order = {
+      buyer: {
+        name: 'Olimar',
+        phone: '097317539',
+        email: 'probando@hotmail.com',
+      },
+      items: cart,
+      total: cart.reduce(
+        (valorPasado, valorActual) => 
+        valorPasado + valorActual.price * valorActual.quantity, 0
+      ),
+      date: moment().format()
+    }
+    const query = collection(db, 'orders');
+      addDoc(query, order).then((response) => {
+          console.log(response);
+          alert('Felicidades por tu compra!')
+        })
+        .catch(() => alert('Tu compra no pudo ser completada, intentalo mas tarde'))
+  }
 
   const totaldiscount = (price, discount, quantity) => {
     let regladetres = discount * price
@@ -28,7 +54,7 @@ const Cart = () => {
           {cart.map((item) => (
           <div key={item.id} className='cart-article' >
             
-            <img  className='img-article' src={item.image} alt={item.name} />
+            <img  className='img-article' src={rutaInicial + item.image} alt={item.name} />
             <h3>{item.name}</h3>
             <p>Precio actual: USD {item.price}</p>
             <p>Descuento: {item.discount}%</p>
@@ -40,7 +66,9 @@ const Cart = () => {
         ))} 
           </>
         )} 
-        
+        <div>
+          <button onClick={createOrder}>Crear orden</button>
+        </div>
     </div>
   )
 }

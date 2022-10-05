@@ -1,4 +1,4 @@
-import logo2 from '../../img/tdp-logo.png';
+import logo2 from './tdp-logo.png';
 import CartWidget from '../CartWidget/CartWidget';
 import '../CartWidget/CartWidget.css'
 import { NavLink } from 'react-router-dom'

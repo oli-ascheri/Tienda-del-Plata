@@ -1,4 +1,4 @@
-import cart from '../../img/cart-logo.png';
+import cart from './cart-logo.png';
 import './CartWidget.css'
 import { Link } from 'react-router-dom';
 

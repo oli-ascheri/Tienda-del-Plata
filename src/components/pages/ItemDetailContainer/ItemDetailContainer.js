@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
         const queryDoc = doc(db, 'items', id)
             getDoc(queryDoc)
             .then((res) => {
-                setProductItem(res.data())
+                setProductItem({id: id, ...res.data()})
             })
             .catch(err => console.log(err))
     }
