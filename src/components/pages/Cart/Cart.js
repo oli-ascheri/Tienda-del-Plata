@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../../context/cartContext"
 import '../Cart/Cart.css'
 import { collection, addDoc, getFirestore } from "firebase/firestore";
-import { moment } from "moment/moment";
+import swal from 'sweetalert';
+import moment from 'moment';
 
 const Cart = () => {
 
@@ -24,12 +25,16 @@ const Cart = () => {
         (valorPasado, valorActual) => 
         valorPasado + valorActual.price * valorActual.quantity, 0
       ),
-      date: moment().format()
+      date: moment().format(), 
     }
     const query = collection(db, 'orders');
-      addDoc(query, order).then((response) => {
-          console.log(response);
-          alert('Felicidades por tu compra!')
+      addDoc(query, order).then(({ id }) => {
+          console.log(id);
+          swal({
+            title: "¡Tu orden de compra fue creada con exito!",
+            text: "ID: " + id,
+            icon: "success"
+          });
         })
         .catch(() => alert('Tu compra no pudo ser completada, intentalo mas tarde'))
   }

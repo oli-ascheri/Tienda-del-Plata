@@ -4,9 +4,14 @@ import swal from 'sweetalert'
 
 
 export const CartProvider = ({ children }) => {
-    const [cart, setCart] = useState([])
+    const [ cart, setCart ] = useState([])
+    const [ totalItems , setTotalItems ] = useState(0)
 
     const addToCart = (item, quantity) => {
+
+        setTotalItems(totalItems + quantity);
+       
+      
         if (isInCart(item.id)) {
             swal({
                 title: "¡No se puede cargar este articulo!",
@@ -23,7 +28,8 @@ export const CartProvider = ({ children }) => {
 
               });
         }
-        console.log('cart', [...cart, { ...item, quantity}])
+        console.log('cart', [...cart, { ...item, quantity}]);
+
     }
 
     const isInCart = (id) => {
@@ -44,8 +50,9 @@ export const CartProvider = ({ children }) => {
         setCart(nuevoArreglo)
     }
 
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeItem, clear }}>
+        <CartContext.Provider value={{ cart, addToCart, removeItem, clear }} >
             {children}
         </CartContext.Provider>
     )
