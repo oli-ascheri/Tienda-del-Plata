@@ -48,32 +48,36 @@ const Cart = () => {
 
   return (
     <div className='buy-cart' >
-        <button onClick={() => clear()}>Vaciar productos</button>
         {cart.length === 0 ? (
           <>
-            <h2>No hay productos en tu carrito</h2>
-            <Link to={'/'} >Volver a comprar</Link>
+            <h1 className='cart-title'>No hay productos en tu carrito</h1>
+            <Link to={'/'} className='back-button'>Volver al inicio</Link>
           </>
         ) : (
           <>
           {cart.map((item) => (
-          <div key={item.id} className='cart-article' >
+            <div key={item.id} className='cart-article' >
             
             <img  className='img-article' src={rutaInicial + item.image} alt={item.name} />
-            <h3>{item.name}</h3>
-            <p>Precio actual: USD {item.price}</p>
-            <p>Descuento: {item.discount}%</p>
-            <p>Cantidad: {item.quantity}</p>
-            <p>Total: USD {totaldiscount(item.price, item.discount, item.quantity)}</p>
+            <div className="detail">
+              <div className="info">
+                <h2>{item.name}</h2>
+                <button onClick={() => removeItem(item.id)}>Eliminar producto</button>
+              </div>
+              <p>Precio actual: USD {item.price}</p>
+              <p>Descuento: {item.discount}%</p>
+              <p>Cantidad: {item.quantity}</p>
+              <h4>Total: USD {totaldiscount(item.price, item.discount, item.quantity)}</h4>
       
-            <button onClick={() => removeItem(item.id)}>Eliminar producto</button>
+            </div>
           </div>
         ))} 
+        <div className="buy-buttons">
+          <button className="buy-button2" onClick={() => clear()}>Vaciar productos</button>
+          <button className="buy-button" onClick={createOrder}>Crear orden</button>
+        </div>
           </>
         )} 
-        <div>
-          <button onClick={createOrder}>Crear orden</button>
-        </div>
     </div>
   )
 }

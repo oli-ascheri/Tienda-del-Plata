@@ -12,11 +12,6 @@ const ItemDetailContainer = () => {
 
     
      const db = getFirestore()
-    //  const queryDoc = doc(db, 'items', id)
-
-    //  getDoc(queryDoc)
-    //     .then((res) => {})
-    //     .catch(err => console.log(err))
 
     const getProduct = () => {
         const queryDoc = doc(db, 'items', id)
@@ -30,18 +25,9 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         getProduct()
         }, [id])
-        
-    // useEffect(() => {
-    //     getProduct.then((response) => {
-    //     setProductItem(response);
-    //     });
-    // }, [])
     
-    
-     
     return (
         
-            // productItem.id ?  // Si encuentro el id del producto voy a mostrar la card 
             <>
             <ItemDetail 
                  key={productItem.id}

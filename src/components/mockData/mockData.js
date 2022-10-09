@@ -1,11 +1,11 @@
 // Celulares
-// import XiaomiPocophone from '../../img/xiaomi-pocophone.jpg'
+import XiaomiPocophone from '../../img/xiaomi-pocophone.jpg'
 import SamsungGalaxy from '../../img/samsung-galaxy.jpg'
 import AppleiPhone13 from '../../img/apple-iphone-13.jpg'
 import HuaweiNova from '../../img/huawei-nova.jpg'
 
 // Computacion
-// import NotebookLenovo from '../../img/notebook-lenovo.jpg'
+import NotebookLenovo from '../../img/notebook-lenovo.jpg'
 import NotebookAsusZenBook from '../../img/notebook-asus-zenbook.jpg'
 import NotebookHuawei from '../../img/notebook-huawei.jpg'
 import MouseLogitech from '../../img/mouse-logitech.jpg'
@@ -30,7 +30,7 @@ const data = [
         id: '1',
         name: 'Xiaomi Pocophone',
         price: 529,
-        // image: XiaomiPocophone,
+        image: XiaomiPocophone,
         comentary: 'Xiaomi Pocophone Poco X4 Pro 5G Dual SIM 256 GB laser black 8 GB RAM.',
         category: 'celulares',
         discount: 24,
@@ -72,7 +72,7 @@ const data = [
         id: '5',
         name: 'Notebook Lenovo',
         price: 375,
-        // image: NotebookLenovo,
+        image: NotebookLenovo,
         comentary: 'Notebook Lenovo V15-IGL iron gray 15.6", Intel Celeron N4020 8GB de RAM 256GB SSD.',
         category: 'computacion',
         discount: 0,

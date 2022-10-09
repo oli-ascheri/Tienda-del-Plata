@@ -11,37 +11,21 @@ const ItemListContainer = () => {
     
     const getProducts = () => {
     const db = getFirestore()
-    const querySnapshot = collection(db, 'items')
+    const queryBase = collection(db, 'items')
+    const querySnapshot = category 
+        ? query(queryBase, where('categoryId', '==', category)) 
+        : queryBase;
 
-    // const queryFilter = query(querySnapshot, where('categoryId', '==', category))
-
-        if (category) {
-
-            const queryFilter = query(
-                querySnapshot, 
-                where('categoryId', '==', category)
-                )
-
-        getDocs(queryFilter)
+        getDocs(querySnapshot)
             .then((response) => {
-                console.log(response)
                 const data = response.docs.map((product) => {
                     return { id: product.id, ...product.data()}
             })
             setProductList(data);   
-        })
-    } else {
-        getDocs(querySnapshot)
-            .then((response) => {
-            console.log(response)
-            const data = response.docs.map((product) => {
-                return { id: product.id, ...product.data()}
-            })
-        setProductList(data);   
-        })
-    }
+        });
+    } 
 
-}
+
     useEffect(() => {
         getProducts()
         }, [category])
@@ -53,17 +37,6 @@ const ItemListContainer = () => {
     ) 
 
 }
-    // useEffect(() => {
-          
-      //     if(category){
-      //         const prodfilter = data.filter(p => p.category === category)
-      //         setProductList(prodfilter)
-      //     } else {
-      //         getProducts.then((response) => {
-      //             setProductList(response);
-      //             }); 
-      //     }
-      // }, [category])
     
 export default ItemListContainer
 

@@ -10,7 +10,6 @@
     margin: 60px auto ;
     width: 80%;
     height: 90%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     animation-name: fade-down;
     animation-iteration-count: 1;
@@ -20,11 +19,93 @@
 
 .cart-article {
     display: flex;
-
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail p {
+    margin: 0px;
+    padding: 0px;
 }
 
 .img-article {
     width: 100px;
-;
+    margin: 20px;
+}
+
+.back-button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 30px;
+    color: gray;
+}
+
+.info {
+    display: flex;
+}
+
+.info button {
+    align-self: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(211, 108, 76);
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.cart-title {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.buy-button {
+    background-color: rgb(223, 194, 47); 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 4px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    height: 50px;
+    width: 250px;
+}
+
+.buy-button2 {
+    background-color: rgb(223, 79, 47); 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 4px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    height: 50px;
+    width: 250px;
+    margin-right: 620px;
+}
+
+.buy-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.buy-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }

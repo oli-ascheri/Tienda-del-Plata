@@ -8,10 +8,7 @@ export const CartProvider = ({ children }) => {
     const [ totalItems , setTotalItems ] = useState(0)
 
     const addToCart = (item, quantity) => {
-
-        setTotalItems(totalItems + quantity);
        
-      
         if (isInCart(item.id)) {
             swal({
                 title: "¡No se puede cargar este articulo!",
@@ -20,6 +17,7 @@ export const CartProvider = ({ children }) => {
               });
         } else {
             setCart ([...cart, { ...item, quantity }])
+            setTotalItems(cart.length + 1);
             swal({
                 title: "Articulo agregado",
                 text: "¡Tu articulo se ingreso al carrito correctamente!",
@@ -29,7 +27,6 @@ export const CartProvider = ({ children }) => {
               });
         }
         console.log('cart', [...cart, { ...item, quantity}]);
-
     }
 
     const isInCart = (id) => {
@@ -38,21 +35,18 @@ export const CartProvider = ({ children }) => {
 
     const clear = () => {
         setCart([])
+        setTotalItems(0)
     }
 
+
     const removeItem = (productId) => {
-        let nuevoArreglo = []
-        cart.forEach((product) => {
-            if (product.id !== productId) {
-                nuevoArreglo.push(product)
-            }
-        })
-        setCart(nuevoArreglo)
+        setCart(cart.filter((product) => product.id !== productId))
+        setTotalItems(cart.length - 1);
     }
 
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeItem, clear }} >
+        <CartContext.Provider value={{ cart, addToCart, removeItem, clear, totalItems }} >
             {children}
         </CartContext.Provider>
     )

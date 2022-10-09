@@ -63,11 +63,9 @@ opacity: 1;
 /* INFERIOR */
 .Nav-bar-inf {
 display: flex;
-justify-content: space-around;
+justify-content: space-evenly;
 
-padding: 5px;
-height: 30px;
-align-items: center;
+height: 45px;
 }
 
 .Nav-bar-categories {
