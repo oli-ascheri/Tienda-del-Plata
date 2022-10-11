@@ -1,5 +1,9 @@
 Pagina de Ecomerce creada por Olimar Ascheri utilizando React JS. 
 
+![ezgif-5-b3a5389e67](https://user-images.githubusercontent.com/104470756/194982432-a26d8dfa-276c-42a9-b4a6-d012b846f07d.gif)
+
+
+
 La idea principal del sitio web es interpretar el funcionamiento de un Ecomerce actual usando como ejemplo el sitio MercadoLibre.com.
 
 
